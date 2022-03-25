@@ -16,44 +16,43 @@ router.post('/', function (req, res) {
     handleLogin(req, res).catch(console.error);
 });
 
-// handle the account login logic
+
 async function handleLogin(req, res) {
     const email = req.body.email;
     const password = req.body.password;
 
-    // confirm account matching the email exists
+    
     const hasAccount = await hasAccountAlready(models, Op, email);
     if (!hasAccount) {
         res.render('login', {
-            title: 'Etsy Clone', loggedIn: req.session.loggedIn, loginError: "Incorrect Email/Password"
+            title: 'Coffee Shop', loggedIn: req.session.loggedIn, loginError: "Incorrect Email/Password"
         });
         return;
     }
 
-    // get the account information
+   
     const account = await getAccount(email);
     if (account === null) {
         res.render('login', {
-            title: 'Etsy Clone', loggedIn: req.session.loggedIn, loginError: "Incorrect Email/Password"
+            title: 'Coffee Shop', loggedIn: req.session.loggedIn, loginError: "Incorrect Email/Password"
         });
         return;
     }
 
-    // compare the entered passwords hash with the database password hash
+    
     const match = await comparePasswordHashes(password, account.dataValues.password);
     if (!match) {
         res.render('login', {
-            title: 'Etsy Clone', loggedIn: req.session.loggedIn, loginError: "Incorrect Email/Password"
+            title: 'Coffee Shop', loggedIn: req.session.loggedIn, loginError: "Incorrect Email/Password"
         });
         return;
     }
 
-    // flag login
+    
     req.session.loggedIn = true;
     req.session.user = account[0];
 
-    // cart size for ui
-    req.session.cartCount = require('../utils/dbUtils').getCartCount(account[0]);
+  
 
     // return if we redirected here to log in
     if (req.session.redirect) {
