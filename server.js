@@ -7,8 +7,10 @@ const app = express();
 
 app.use(express.json());
 const coffeesRoute = require('./routes/coffeesRoute')
+const userRoute = require('./routes/userRoute')
 
 app.use('/api/coffees/', coffeesRoute)
+app.use('/api/users/' , userRoute)
 
 
 
