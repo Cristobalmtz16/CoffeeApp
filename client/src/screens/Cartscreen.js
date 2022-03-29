@@ -38,7 +38,6 @@ export default function Cartscreen() {
 
                             <div className='m-1 w-100'>
                             <i className="fa fa-trash mt-5" aria-hidden="true" onClick={()=>{dispatch(deleteFromCart(item))}}></i>
-                            <Checkout subtotal={subtotal} />
                             </div>
 
                         </div>
@@ -51,7 +50,8 @@ export default function Cartscreen() {
                 
 
             <div className='col-md-4 text-right'>
-                <h2 style={{fontSize: '45px'}}>Subtotal:$ {subtotal}</h2>
+                <h2 style={{fontSize: '45px'}}>Subtotal: $ {subtotal}</h2>
+                <Checkout subtotal={subtotal} />
                 
             </div>
 

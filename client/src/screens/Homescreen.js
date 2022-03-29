@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import Coffee from '../components/Coffee'
 import { getAllCoffees } from '../actions/coffeeActions'
+import Loading from '../components/Loading'
+import Error from '../components/Error'
 
 
 export default function Homescreen() {
@@ -24,7 +26,7 @@ export default function Homescreen() {
 
 
 
-                {loading ? (<h1>Loading...</h1>) : error ? (<h1>Something Went Wrong</h1>) : (
+                {loading ? (<Loading />) : error ? (<Error error='Something Went Wrong'/>) : (
                     coffees.map(coffee => {
 
                         return <div className="col-md-4">
