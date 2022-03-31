@@ -19,7 +19,7 @@ export default function Navbar() {
         <div className="collapse navbar-collapse" id="navbarTogglerDemo03">
           <ul className="navbar-nav ms-auto mt-2 mt-lg-0">
 
-            {currentUser ? (<div class="dropdown mt-2">
+            {currentUser ? (<div className="dropdown mt-2">
               <a className="dropdown-toggle nav-link" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 {currentUser.name}
               </a>

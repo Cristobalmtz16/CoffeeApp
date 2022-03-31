@@ -10,7 +10,7 @@ export default function Checkout({subtotal}) {
     const orderstate = useSelector((state) => state.placeOrderReducer)
     const {loading , error , success} = orderstate
     const dispatch = useDispatch()
-    function tokenHander(token)
+    function tokenHandler(token)
     {
         console.log(token);
         dispatch(placeOrder(token , subtotal))
@@ -26,8 +26,9 @@ export default function Checkout({subtotal}) {
 
             <StripeCheckout
             amount={subtotal*100}
+            shippingAddress
             billingAddress
-            token={tokenHander}
+            token={tokenHandler}
             stripeKey="pk_test_51KeNO4FDQA1L4nD1cD4q4hRrBinxaugsIYhOwpdLUZSv874MAJuWpkCDynoMkgufQCprZoEp1xGtnQwJAMzKxaMR00Bf2TUM43"
             currency='USD'
             >

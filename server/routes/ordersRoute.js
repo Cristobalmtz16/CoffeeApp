@@ -1,9 +1,15 @@
 const express = require("express");
 const router = express.Router();
 const { v4 : uuidv4 } = require('uuid')
-const stripe = require("stripe")("")
+const stripe = require("stripe")("sk_test_51KeNO4FDQA1L4nD1qYftghuo3zFwNzkj1R6g9phw184tuVzSIHK42KGX5lcXMzfIUJIaNumm1tE10Td1zHeTauqm00IKK7kQNC")
+const Order = require('../models/orderModel')
+const { application } = require("express");
 
 router.post("/placeorder", async (req, res) =>{
+   
+
+
+
 
     const {token, subtotal, currentUser, cartItems} = req.body
 
@@ -19,12 +25,25 @@ router.post("/placeorder", async (req, res) =>{
             customer: customer.id,
             receipt_email: token.email
         }, {
-            IdempotencyKey: uuidv4()
+            idempotencyKey: uuidv4()
         })
 
         if (payment) 
         {
-            res.send('Payment Done')
+          
+            const neworder = new Order({
+
+               name:currentUser.name,
+               email:currentUser.email,
+               userid:currentUser.id,
+               orderItems:cartItems,
+               orderAmount:subtotal,        
+               transactionId:payment.source.id      
+            })
+
+            neworder.save()
+
+            res.send('Order Placed Successfully')
         } 
         else {
             res.send('Payment Failed')
