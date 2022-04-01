@@ -6,7 +6,7 @@ const orderSchema = mongoose.Schema({
     userid: {type:String, require},
     orderItems: [],
     orderAmoutnt:{type:Number, require},
-    isPickedUp: {type:Boolean, require, default:false},
+    pickedUp: {type:Boolean, require, default:false},
     transactionId:{type:String, require}
 }, {
     timestamps: true

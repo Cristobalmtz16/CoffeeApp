@@ -14,7 +14,7 @@ export default function Navbar() {
         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
         </button>
-        <a className="navbar-brand" href="#">Coffee Shop</a>
+        <a className="navbar-brand" href="/">Coffee Shop</a>
 
         <div className="collapse navbar-collapse" id="navbarTogglerDemo03">
           <ul className="navbar-nav ms-auto mt-2 mt-lg-0">
@@ -24,12 +24,12 @@ export default function Navbar() {
                 {currentUser.name}
               </a>
               <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a className="dropdown-item" href="#">Orders</a>
+                <a className="dropdown-item" href="/orders">Orders</a>
                 <a className="dropdown-item" href="#" onClick={()=>{dispatch(logoutUser())}}><li>Logout</li></a>
               </div>
             </div>) : (
               <li className="nav-item active">
-                <a className="nav-link" href="/login">Login</a>
+                <a className="nav-link mt-2" href="/login">Login</a>
               </li>)}
 
 

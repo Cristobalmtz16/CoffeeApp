@@ -4,6 +4,7 @@ import Coffee from '../components/Coffee'
 import { getAllCoffees } from '../actions/coffeeActions'
 import Loading from '../components/Loading'
 import Error from '../components/Error'
+import Filter from '../components/Filter'
 
 
 export default function Homescreen() {
@@ -22,11 +23,17 @@ export default function Homescreen() {
 
     return (
         <div>
+            <Filter />
             <div className="row justify-content-center">
 
 
 
-                {loading ? (<Loading />) : error ? (<Error error='Something Went Wrong'/>) : (
+
+                {loading ? (
+                    <Loading />
+                ) : error ? (
+                    <Error error='Something Went Wrong' />
+                ) : (
                     coffees.map(coffee => {
 
                         return <div className="col-md-4">

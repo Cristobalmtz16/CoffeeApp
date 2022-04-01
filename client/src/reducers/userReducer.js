@@ -1,4 +1,5 @@
 export const registerUserReducer = (state={}, action) =>{
+    console.log(action)
 
     switch(action.type)
     {

@@ -10,7 +10,7 @@ import Homescreen from './screens/Homescreen';
 import Cartscreen from './screens/Cartscreen';
 import Loginscreen from './screens/Loginscreen';
 import Registerscreen from './screens/Registerscreen';
-
+import Ordersscreen from './screens/Ordersscreen';
 
 
 function App() {
@@ -26,6 +26,7 @@ function App() {
         <Route path="/cart" element={<Cartscreen />} exact />
         <Route path="/register" element={<Registerscreen />} exact />
         <Route path="/login" element={<Loginscreen />} exact />
+        <Route path="/orders" element={<Ordersscreen />} exact />
         </Routes>
 
 
