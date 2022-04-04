@@ -28,11 +28,11 @@ function App() {
 
         <Routes>
 
-          <Route path="/" element={<Homescreen />} exact />
-          <Route path="/cart" element={<Cartscreen />} exact />
-          <Route path="/register" element={<Registerscreen />} exact />
-          <Route path="/login" element={<Loginscreen />} exact />
-          <Route path="/orders" element={<Ordersscreen />} exact />
+          <Route path="https://immense-inlet-63012.herokuapp.com/api/" element={<Homescreen />} exact />
+          <Route path="https://immense-inlet-63012.herokuapp.com/api/cart" element={<Cartscreen />} exact />
+          <Route path="https://immense-inlet-63012.herokuapp.com/api/register" element={<Registerscreen />} exact />
+          <Route path="https://immense-inlet-63012.herokuapp.com/api/login" element={<Loginscreen />} exact />
+          <Route path="https://immense-inlet-63012.herokuapp.com/api/orders" element={<Ordersscreen />} exact />
           <Route path="/admin" element={<Adminscreen />} />
           <Route path="/admin/userslist" element={<Userslist />} exact />
           <Route path="/admin/orderslist" element={<Orderslist />} exact />

@@ -17,7 +17,7 @@ export default function Loginscreen() {
 
           if(localStorage.getItem('currentUser'))
           {
-              window.location.href='/'
+              window.location.href='https://immense-inlet-63012.herokuapp.com/api/'
           }
         
     }, [])

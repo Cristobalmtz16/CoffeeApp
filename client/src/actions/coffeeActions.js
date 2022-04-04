@@ -68,7 +68,7 @@ export const editCoffee=(editedcoffee)=>async dispatch=>{
         const response= await axios.post('https://immense-inlet-63012.herokuapp.com/api/coffees/editcoffee' , {editedcoffee})
         console.log(response);
         dispatch({type:'EDIT_COFFEE_SUCCESS'})
-        window.location.href='/admin/coffeeslist'
+        window.location.href='https://immense-inlet-63012.herokuapp.com/api/admin/coffeeslist'
     } catch (error) {
         dispatch({type:'EDIT_COFFEE_FAILED' , payload : error})
     }
