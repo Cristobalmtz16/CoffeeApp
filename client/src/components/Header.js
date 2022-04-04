@@ -53,7 +53,7 @@ const Header = () => {
             <NavLink to="/">Home</NavLink>
           </li>
           <li>
-            < NavLink to="/Homescreen">Menu</NavLink>
+            < NavLink to="/homescreen">Menu</NavLink>
           </li>
           <li>
             <NavLink to="/login">Sign in</NavLink>

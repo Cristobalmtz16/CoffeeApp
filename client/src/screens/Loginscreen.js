@@ -4,6 +4,7 @@ import {useDispatch , useSelector} from 'react-redux'
 import { loginUser } from "../actions/userActions";
 import Error from "../components/Error";
 import Loading from "../components/Loading";
+import { NavLink } from "react-router-dom";
 export default function Loginscreen() {
   
 
@@ -51,7 +52,7 @@ export default function Loginscreen() {
             
             <button onClick={login} className="btn mt-3 mb-3">LOGIN</button>
             <br/>
-            <a style={{color:'black'}} href="/register" className="mt-2">Click Here To Register</a>
+            <NavLink to="/register">Click Here To Register</NavLink>
           </div>
         </div>
       </div>
