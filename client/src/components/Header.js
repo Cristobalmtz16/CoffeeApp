@@ -6,6 +6,7 @@ import logoUrl from "./brandLogo.svg";
 import { MdClose } from "react-icons/md";
 import { FiMenu } from "react-icons/fi";
 import { useSelector } from "react-redux";
+import Homescreen from "../screens/Homescreen";
 const Header = () => {
   const cartstate = useSelector((state) => state.cartReducer);
   const [drawerOpen, setDrawerOpen] = React.useState(false);
@@ -53,7 +54,7 @@ const Header = () => {
             <NavLink to="/">Home</NavLink>
           </li>
           <li>
-            < NavLink to="/homescreen">Menu</NavLink>
+            < NavLink to="/shop">Menu</NavLink>
           </li>
           <li>
             <NavLink to="/login">Sign in</NavLink>
