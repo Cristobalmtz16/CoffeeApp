@@ -31,7 +31,7 @@ export const addToCart=(coffee, quantity, size)=>(dispatch, getState)=>{
   
 
     const cartItems = getState().cartReducer.cartItems
-    localStorage.setItem('https://immense-inlet-63012.herokuapp.com/api/cart/cartItems', JSON.stringify(cartItems))
+    localStorage.setItem('/cartItems', JSON.stringify(cartItems))
 
 
 
@@ -42,7 +42,7 @@ export const deleteFromCart=(coffee)=>(dispatch, getState)=>{
 
     dispatch({type: 'DELETE_FROM_CART', payload:coffee})
     const cartItems = getState().cartReducer.cartItems
-    localStorage.setItem('https://immense-inlet-63012.herokuapp.com/api/cart/cartItems', JSON.stringify(cartItems))
+    localStorage.setItem('/cartItems', JSON.stringify(cartItems))
 
 
 
