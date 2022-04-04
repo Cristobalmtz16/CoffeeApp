@@ -6,7 +6,7 @@ export const getAllCoffees = () => async dispatch => {
     dispatch({ type: 'GET_COFFEES_REQUEST' })
 
     try {
-        const response = await axios.get('/api/coffees/getallcoffees')
+        const response = await axios.get('https://immense-inlet-63012.herokuapp.com/api/coffees/getallcoffees')
         console.log(response);
         dispatch({ type: 'GET_COFFEES_SUCCESS', payload: response.data })
 
