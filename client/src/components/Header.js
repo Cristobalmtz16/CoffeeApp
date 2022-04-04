@@ -50,18 +50,18 @@ const Header = () => {
         <img src={logoUrl} alt="Company logo" />
         <ul className="navIcon">
           <li>
-            <a href="/">Home</a>
+            <NavLink to="/">Home</NavLink>
           </li>
           <li>
-            <a href="/shop">Menu</a>
+            < NavLink to="/Homescreen">Menu</NavLink>
           </li>
           <li>
-            <a href="/login">Sign in</a>
+            <NavLink to="/login">Sign in</NavLink>
           </li>
           <li>
-            <a href="/cart">
+            <NavLink to="/cart">
               Cart <span style={{color:"#d99441" }}>{cartstate.cartItems.length}</span>
-            </a>
+            </NavLink>
           </li>
         </ul>
       </div>
