@@ -4,7 +4,7 @@ export const registerUser=(user)=>async dispatch=>{
     dispatch({type:'USER_REGISTER_REQUEST'})
 
     try {
-        const response = await axios.post('/api/users/register' , user)
+        const response = await axios.post('https://immense-inlet-63012.herokuapp.com/api/users/register' , user)
         console.log(response);
         dispatch({type:'USER_REGISTER_SUCCESS'})
     } catch (error) {
@@ -42,7 +42,7 @@ export const getAllUsers=()=>async dispatch=>{
     dispatch({type:'GET_USERS_REQUEST'})
 
     try {
-        const response = await axios.get('/api/users/getallusers')
+        const response = await axios.get('https://immense-inlet-63012.herokuapp.com/api/users/getallusers')
         console.log(response);
         dispatch({type:'GET_USERS_SUCCESS' , payload : response.data})
        
@@ -55,7 +55,7 @@ export const getAllUsers=()=>async dispatch=>{
 export const deleteUser=(userid)=>async dispatch=>{
 
     try {
-        await axios.post('/api/users/deleteuser', {userid})
+        await axios.post('https://immense-inlet-63012.herokuapp.com/api/users/deleteuser', {userid})
         alert('User deleted successfully')
         window.location.reload()
     } catch (error) {
