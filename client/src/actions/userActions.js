@@ -18,7 +18,7 @@ export const loginUser=(user)=>async dispatch=>{
     dispatch({type:'USER_LOGIN_REQUEST'})
 
     try {
-        const response = await axios.post('/api/users/login' , user)
+        const response = await axios.post('https://immense-inlet-63012.herokuapp.com/api/users/login' , user)
         console.log(response);
         dispatch({type:'USER_LOGIN_SUCCESS' , payload: response.data})
         localStorage.setItem('currentUser' , JSON.stringify(response.data))
