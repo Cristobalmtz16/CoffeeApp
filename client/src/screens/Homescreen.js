@@ -47,15 +47,7 @@ export default function Homescreen() {
                 )}
 
 
-                {coffees.map(coffee => {
-
-                    return <div className="col-md-3 m-3" key={coffee._id}>
-                        <div>
-                            <Coffee coffee={coffee} />
-                        </div>
-
-                    </div>
-                })}
+              
             </div>
 
         </div>
