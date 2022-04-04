@@ -26,8 +26,8 @@ There is a button where the user can add the item to the shopping cart.
 When the user puts the item in the bag, the shopping cart will show the number of items that are in the shopping cart.
 
 3. The shopping cart page
-The shopping bag page is available for logged in users and guests. Purchases can be made by both.
-Gives an overview of all items that are in the shopping bag, the overview information includes; image, name, quantity, price and subtotal.
+The shopping cart page is available for logged in users and guests. Purchases can be made by both.
+Gives an overview of all items that are in the shopping cart, the overview information includes; image, name, quantity, price and subtotal.
 users can update the quantity of the items they have.
 users can delete items from their order.
 There is an overview of the total price, the delivery costs and the grant total of the order.
