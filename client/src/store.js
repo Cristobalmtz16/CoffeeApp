@@ -2,10 +2,10 @@ import {combineReducers} from 'redux'
 import { createStore, applyMiddleware } from 'redux'
 import thunk from 'redux-thunk'
 import{composeWithDevTools} from 'redux-devtools-extension'
-import { getAllCoffeesReducer } from './reducers/coffeeReducer'
+import { getAllCoffeesReducer, addCoffeeReducer, getCoffeeByIdReducer, editCoffeeReducer } from './reducers/coffeeReducer'
 import { cartReducer } from './reducers/cartReducer'
-import { loginUserReducer, registerUserReducer } from './reducers/userReducer'
-import { placeOrderReducer, getUserOrdersReducer } from './reducers/orderReducer'
+import { getAllUsersReducer, loginUserReducer, registerUserReducer } from './reducers/userReducer'
+import { placeOrderReducer, getUserOrdersReducer, getAllOrdersReducer } from './reducers/orderReducer'
 
 const finalReducer = combineReducers({
     getAllCoffeesReducer : getAllCoffeesReducer,
@@ -14,6 +14,12 @@ const finalReducer = combineReducers({
     loginUserReducer: loginUserReducer,
     placeOrderReducer: placeOrderReducer,
     getUserOrdersReducer: getUserOrdersReducer,
+    addCoffeeReducer: addCoffeeReducer,
+    getCoffeeByIdReducer:getCoffeeByIdReducer,
+    editCoffeeReducer:editCoffeeReducer,
+    getAllOrdersReducer:getAllOrdersReducer,
+    getAllUsersReducer:getAllUsersReducer,
+
 
 })
 
