@@ -76,3 +76,23 @@ input{
 td , th , tr{
   text-align:left;
 }
+.adminfunctions{
+  padding: 10px;
+  background-color: rgb(9, 9, 113);
+
+}
+
+.adminfunctions li{
+  list-style-type: none !important;
+  display: inline !important;
+  color: white !important;
+}
+
+.adminfunctions li a{
+  color: white !important;
+  padding: 20px;
+}
+
+td, th, tr{
+  text-align: left ;
+}
