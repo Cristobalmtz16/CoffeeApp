@@ -21,7 +21,7 @@ export const filterCoffees = (searchkey, category) => async dispatch => {
     dispatch({ type: 'GET_COFFEES_REQUEST' })
 
     try {
-        const response = await axios.get('/api/coffees/getallcoffees')
+        const response = await axios.get('https://immense-inlet-63012.herokuapp.com/api/coffees/getallcoffees')
         filteredCoffees = response.data.filter(coffee => coffee.name.toLowerCase().includes(searchkey))
 
         if (category != 'all')
@@ -40,7 +40,7 @@ export const filterCoffees = (searchkey, category) => async dispatch => {
 export const addCoffee = (coffee) => async dispatch => {
     dispatch({ type: 'ADD_COFFEE_REQUEST' })
     try {
-        const response = await axios.post('/api/coffees/addcoffee', { coffee })
+        const response = await axios.post('https://immense-inlet-63012.herokuapp.com/api/coffees/addcoffee', { coffee })
         console.log(response);
         dispatch({ type: 'ADD_COFFEE_SUCCESS' })
     } catch (error) {
@@ -53,7 +53,7 @@ export const getCoffeeById = (coffeeid) => async dispatch => {
     dispatch({ type: 'GET_COFFEEBYID_REQUEST' })
 
     try {
-        const response = await axios.post('/api/coffees/getcoffeebyid', { coffeeid })
+        const response = await axios.post('https://immense-inlet-63012.herokuapp.com/api/coffees/getcoffeebyid', { coffeeid })
         console.log(response);
         dispatch({ type: 'GET_COFFEEBYID_SUCCESS', payload: response.data })
     } catch (error) {
@@ -65,7 +65,7 @@ export const getCoffeeById = (coffeeid) => async dispatch => {
 export const editCoffee=(editedcoffee)=>async dispatch=>{
     dispatch({type:'EDIT_COFFEE_REQUEST'})
     try {
-        const response= await axios.post('/api/coffees/editcoffee' , {editedcoffee})
+        const response= await axios.post('https://immense-inlet-63012.herokuapp.com/api/coffees/editcoffee' , {editedcoffee})
         console.log(response);
         dispatch({type:'EDIT_COFFEE_SUCCESS'})
         window.location.href='/admin/coffeeslist'
@@ -77,7 +77,7 @@ export const editCoffee=(editedcoffee)=>async dispatch=>{
 export const deleteCoffee=(coffeeid)=>async dispatch=>{
 
     try {
-        const response =await axios.post('/api/coffees/deletecoffee' , {coffeeid})
+        const response =await axios.post('https://immense-inlet-63012.herokuapp.com/api/coffees/deletecoffee' , {coffeeid})
         alert('Coffee Deleted Successfully')
         console.log(response);
         window.location.reload()
