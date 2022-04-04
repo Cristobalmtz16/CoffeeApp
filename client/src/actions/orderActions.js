@@ -67,7 +67,7 @@ export const deliverOrder=(orderid)=>async dispatch=>{
     const response = await axios.post('https://immense-inlet-63012.herokuapp.com/api/orders/deliverorder' , {orderid})
     console.log(response);
     alert('Order Picked Up')
-    const orders = await axios.get('/api/orders/getallorders')
+    const orders = await axios.get('https://immense-inlet-63012.herokuapp.com/api/orders/getallorders')
     dispatch({type:'GET_ALLORDERS_SUCCESS' , payload:orders.data})
   } catch (error) {
     console.log(error);
