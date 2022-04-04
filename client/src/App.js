@@ -31,7 +31,7 @@ function App() {
           <Route path="/" element={<Homescreen />}  />
           <Route path="/cart" element={<Cartscreen />}  />
           <Route path="/register" element={<Registerscreen />}  />
-          <Route path="https://immense-inlet-63012.herokuapp.com/api/login" element={<Loginscreen />}  />
+          <Route path="/login" element={<Loginscreen />}  />
           <Route path="/orders" element={<Ordersscreen />}  />
           <Route path="/admin" element={<Adminscreen />} />
           <Route path="/admin/userslist" element={<Userslist />} exact />

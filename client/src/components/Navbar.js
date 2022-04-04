@@ -24,18 +24,18 @@ export default function Navbar() {
                <b> {currentUser.name} </b>
               </a>
               <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a className="dropdown-item" href="/orders"><b>Orders</b></a>
+                <a className="dropdown-item" href="https://immense-inlet-63012.herokuapp.com/api/orders"><b>Orders</b></a>
                 <a className="dropdown-item" href="#" onClick={()=>{dispatch(logoutUser())}}><li><b>Logout</b></li></a>
               </div>
             </div>) : (
               <li className="nav-item active">
-                <a className="nav-link mt-2" href="/login"><b>Login</b></a>
+                <a className="nav-link mt-2" href="https://immense-inlet-63012.herokuapp.com/api/login"><b>Login</b></a>
               </li>)}
 
 
 
             <li className="nav-item">
-              <a className="nav-link mt-2" href="/cart"><b>Cart {cartstate.cartItems.length}</b> </a>
+              <a className="nav-link mt-2" href="https://immense-inlet-63012.herokuapp.com/api/cart"><b>Cart {cartstate.cartItems.length}</b> </a>
             </li>
           </ul>
 
