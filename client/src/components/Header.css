@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,300;1,400&display=swap");
+
+.header {
+  display: flex;
+  width: 100%;
+  height: 250px;
+  justify-content: space-around;
+
+  background: #0b1c26;
+}
+.header img {
+  max-width: 100%;
+  height: auto;
+  margin-top: .5rem;
+  margin-bottom: 1rem;
+  
+
+ 
+}
+.hamburger {
+  display: none;
+}
+
+.navIcon {
+  background-color: transparent;
+  display: flex;
+  flex-flow: row nowrap;
+  padding: 1em;
+  text-align: right;
+  list-style: none;
+  position: absolute;
+  top: 0.5rem;
+  right: 0.8rem;
+  justify-content: space-between;
+  max-height: 5.4em;
+  overflow-x: hidden;
+  list-style-type: none;
+  font-family: "Poppins", "arial";
+  padding: 0;
+  min-width: 16rem;
+}
+
+a {
+  text-decoration: none;
+  color: #446173;
+}
+.hamburgerNavIcon {
+  display: none;
+}
+@media only screen and (max-width: 767px) {
+  .navIcon {
+    display: none;
+  }
+  a {
+    display: block;
+    padding: 10px 40px;
+    text-decoration: none;
+    color: #d99441;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  .header {
+    flex-direction: column;
+  }
+  .hamburgerNavIcon {
+    overflow-y: scroll;
+    list-style: none;
+    position: fixed;
+    top: 0;
+    background: #446173;
+    left: 0;
+    bottom: 0;
+    height: 100vh;
+    width: 0;
+    overflow: hidden;
+    max-width: 290px;
+    z-index: 9;
+    padding: unset;
+    display: unset;
+  }
+  .hamburgerNavIcon.showMenu {
+    width: 100%;
+  }
+  .hamburger {
+    position: absolute;
+    top: 0;
+    right: 20px;
+    height: 50px;
+    width: 50px;
+    display: unset;
+    background: transparent;
+    border: none;
+  }
+}
