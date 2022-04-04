@@ -1,10 +1,14 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import "./index.css";
-import App from "./App";
-import reportWebVitals from "./reportWebVitals";
-import { Provider } from "react-redux";
-import store from "./store";
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap'
+import 'bootstrap/dist/js/bootstrap.js';
+import 'bootstrap/dist/js/bootstrap.bundle.min';
+import App from './App';
+import reportWebVitals from './reportWebVitals';
+import {Provider} from 'react-redux';
+import store from './store';
 import { BrowserRouter } from "react-router-dom";
 
 ReactDOM.render(
