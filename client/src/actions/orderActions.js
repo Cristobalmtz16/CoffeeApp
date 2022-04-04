@@ -29,7 +29,7 @@ export const getUserOrders = () => async (dispatch, getState) => {
   dispatch({ type: 'GET_USER_ORDERS_REQUEST' })
 
   try {
-    const response = await axios.post('/api/orders/getuserorders', { userid: currentUser._id })
+    const response = await axios.post('https://immense-inlet-63012.herokuapp.com/api/orders/getuserorders', { userid: currentUser._id })
 
 
     console.log(response);
