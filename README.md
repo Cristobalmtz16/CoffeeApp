@@ -37,7 +37,7 @@ There is a button with ‘Pay Now’ to continue the purchase.
 The checkout page uses Stripe to perform securce checkouts
 
 ## Screenshots
-<img src="/images/screenshots.gif">
+<img src="/images/beanery.gif">
    
 ## Live link: 
 https://csccoffeeshop.surge.sh/
