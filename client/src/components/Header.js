@@ -27,7 +27,7 @@ const Header = () => {
         </button>
         <ul className={`hamburgerNavIcon ${drawerOpen ? "showMenu" : ""}`}>
           <li>
-            <NavLink to="/aboutus" onClick={() => setDrawerOpen(false)}>
+            <NavLink to="/" onClick={() => setDrawerOpen(false)}>
               About Us
             </NavLink>
           </li>
@@ -37,25 +37,30 @@ const Header = () => {
             </NavLink>
           </li>
           <li>
-            <NavLink to="#info" onClick={() => setDrawerOpen(false)}>
+            <NavLink to="/login" onClick={() => setDrawerOpen(false)}>
               Sign in
+            </NavLink>
+          </li>
+          <li>
+          <NavLink to="/cart" onClick={() => setDrawerOpen(false)}>
+          Cart <span style={{color:"#d99441" }}>{cartstate.cartItems.length}</span>
             </NavLink>
           </li>
         </ul>
         <img src={logoUrl} alt="Company logo" />
         <ul className="navIcon">
           <li>
-            <a href="#my-portfolio">About Us</a>
+            <a href="/">Home</a>
           </li>
           <li>
-            <a href="#my-skills">Menu</a>
+            <a href="/shop">Menu</a>
           </li>
           <li>
-            <a href="#info">Sign in</a>
+            <a href="/login">Sign in</a>
           </li>
           <li>
             <a href="/cart">
-              Cart {cartstate.cartItems.length}
+              Cart <span style={{color:"#d99441" }}>{cartstate.cartItems.length}</span>
             </a>
           </li>
         </ul>

@@ -5,6 +5,7 @@ import { getAllCoffees, deleteCoffee } from '../actions/coffeeActions'
 import Loading from '../components/Loading'
 import Error from '../components/Error'
 import Filter from '../components/Filter'
+import "./Coffeelist.css"
 
 
 
