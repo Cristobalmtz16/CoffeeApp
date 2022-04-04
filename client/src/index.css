@@ -1,5 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Urbanist:wght@100&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,300;1,400&display=swap");
 
 body {
   margin: 0;
@@ -8,8 +8,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: 'Montserrat', sans-serif !important;
+  font-family: 'Poppins', sans-serif !important;
 font-family: 'Urbanist', sans-serif !important;
+background: #446173;
 }
 
 code {
@@ -20,6 +21,14 @@ code {
 .nav-link{
   color:black !important;
 }
+.col-md-4{
+ 
+  background-color: #446173;
+}
+.orderBg{
+  background-color: #446173
+
+}
 
 .navbar-brand{
   color: black !important;
@@ -27,12 +36,13 @@ code {
 
 h1{
   font-size: 20px !important;
+  
 }
 .flex-container{
   display: flex !important;
 }
 .btn{
-  background-color: red !important;
+  background-color: #d99441 !important;
   color: white !important;
 }
 
@@ -40,14 +50,17 @@ select{
   box-shadow: none !important;
   border-color: black !important;
 }
+.col-md-5 {
+  background-color: #446173;
+}
 
 .fa-plus{
-  color: red;
+  color: #d99441;
   margin: 5px;
 }
 
 .fa-minus{
-  color: red;
+  color: #d99441;
   margin: 5px;
 }
 

@@ -22,7 +22,7 @@ export default function Homescreen() {
 
 
     return (
-        <div>
+        <div className='orderBg'>
             <Filter />
             <div className="row justify-content-center">
 
