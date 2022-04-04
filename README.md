@@ -1,4 +1,4 @@
-# coffeeapp
+# Three Bayous Beanery
 Welcome to the big, bold flavours of <strong>Three Bayous Beanery.</strong>We’ll help you wake up first thing in the morning and unwind at the end of the day with our very own fresh blends, sourced from around the globe.</p>
  
 <p><strong>Three Bayous Beanery.</strong> offers the world’s best expertly curated artisan coffee - seasonally sourced and carefully roasted - delivered to your doorstep.
