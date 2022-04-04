@@ -1,4 +1,5 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.css';
 import { useSelector, useDispatch } from 'react-redux';
 import { logoutUser } from '../actions/userActions';
@@ -29,13 +30,13 @@ export default function Navbar() {
               </div>
             </div>) : (
               <li className="nav-item active">
-                <a className="nav-link mt-2" href="/login"><b>Login</b></a>
+              <NavLink to="/login">Login</NavLink>
               </li>)}
 
 
 
             <li className="nav-item">
-              <a className="nav-link mt-2" href="/cart"><b>Cart {cartstate.cartItems.length}</b> </a>
+             <NavLink to="/cart">Cart {cartstate.cartItems.length}</NavLink>
             </li>
           </ul>
 

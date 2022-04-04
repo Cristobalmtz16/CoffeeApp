@@ -22,9 +22,11 @@ import Orderslist from './screens/Orderslist';
 function App() {
   return (
     <div className="App">
-      <Navbar />
+      
 
       <BrowserRouter>
+
+      <Navbar />
 
         <Routes>
 
