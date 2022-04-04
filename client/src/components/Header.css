@@ -1,0 +1,16 @@
+.header {
+  position: flex;
+  width: 100%;
+  height: 230px;
+  left: 0px;
+  top: 0px;
+  
+  background: #0B1C26;
+}
+.header img {
+  position: flex;
+  width: 483.56px;
+  height: 204.82px;
+  align-items: center;
+  top: 14.18px;
+}
