@@ -3,11 +3,15 @@ import { useDispatch, useSelector}  from 'react-redux'
 import { getUserOrders } from '../actions/orderActions'
 import Loading from '../components/Loading'
 import Error from '../components/Error'
+import { Adminscreen } from './Adminscreen'
+
+
 export default function OrdersScreen() {
 
     const dispatch = useDispatch()
     const orderstate = useSelector(state=>state.getUserOrdersReducer)
     const {orders , error , loading} = orderstate
+    
 
 
     useEffect(() => {
@@ -32,14 +36,14 @@ export default function OrdersScreen() {
                                    <hr/>
                                   {order.orderItems.map(item=>{
                                       return <div>
-                                          <p>{item.name} {item.size}  {item.quantity} $ {item.price}</p>
+                                          <p>{item.name} {item.size}  {item.quantity}</p>
                                       </div>
                                   })}
                                </div> 
                                <div className='text-left w-100 m-1'>
                                <h2 style={{fontSize: '25px'}}>Order Info</h2>
                                <hr/>
-                               <p>Order Amount : {order.orderAmount}</p>
+                              
                                <p>Date : {order.createdAt.substring(0,10)}</p>
                                <p>Transaction Id : {order.transactionId}</p>
                                <p> Order Id : {order._id}</p>

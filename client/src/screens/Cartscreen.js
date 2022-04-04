@@ -22,7 +22,7 @@ export default function Cartscreen() {
 
                             <div className='text-left m-1 w-100'>
                                 <h1>{item.name} [{item.size}]</h1>
-                                <h1>Price: {item.quantity} * {item.prices[0][item.size]} = {item.price}</h1>
+                                <h1>Price: $ {item.price}</h1>
                                 <h1 style={{display:'inline'}}>Quantity:</h1>
                                 <i className="fa fa-plus" aria-hidden="true" onClick={()=>{dispatch(addToCart(item, item.quantity + 1, item.size))}}></i>
                                 <b>{item.quantity}</b>
