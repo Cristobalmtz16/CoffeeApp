@@ -22,7 +22,7 @@ export const loginUser=(user)=>async dispatch=>{
         console.log(response);
         dispatch({type:'USER_LOGIN_SUCCESS' , payload: response.data})
         localStorage.setItem('currentUser' , JSON.stringify(response.data))
-        window.location.href='/'
+        window.location.href='https://csccoffeeshop.surge.sh/'
     } catch (error) {
         dispatch({type:'USER_LOGIN_FAILED' , payload: error})
     }
@@ -33,7 +33,7 @@ export const logoutUser=()=>dispatch=>{
 
 
       localStorage.removeItem('currentUser')
-      window.location.href='/login'
+      window.location.href='https://immense-inlet-63012.herokuapp.com/api/login'
 
 }
 
